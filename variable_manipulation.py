@@ -25,6 +25,5 @@ We shall use Pearson correlation factor pearson in this case.
 """""
 def feature_selection(dataframe):
     dataframe.corr(method='pearson') 
-    features_sets = ["DEROG", "DELINQ",
-                          "CLAGE", "NINQ", "DEBTINC", "YOJ", "LOAN"]
+    features_sets = ["LOAN"]
     return [dataframe, features_sets]
