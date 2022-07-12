@@ -20,25 +20,26 @@ for data_visual in data_visuals:
 # Variable value count
 variable_count_array = variable_distribution.variable_distribution_count(dataframe)
 for variable_count in variable_count_array:
+    print('Ready for variable count!')
     print(variable_count) 
 
-# manipulate dataframe by checking some conditions
+# # manipulate dataframe by checking some conditions
 imputed_dataframe = variable_manipulation.replace_values_and_print_final_dataframe_look(dataframe)
 print(imputed_dataframe)
 
-# data info transformation
+# # data info transformation
 transformed_dataframe = feature_transformation.feature_transform(imputed_dataframe)
 print(transformed_dataframe)
 
-####
-#  model setup starts here
-#  Checking the perfomance of our algorithim.
-#  Data split is also done here!
-#  Uncomment this method call after running it. 
-#  To test and compare
-#    on the model performance, Then run the model after threshold changes.
 # ####
-# model.apply_error_matrix_algorithm(transformed_dataframe)
+# #  model setup starts here
+# #  Checking the perfomance of our algorithim.
+# #  Data split is also done here!
+# #  Uncomment this method call after running it. 
+# #  To test and compare
+# #    on the model performance, Then run the model after threshold changes.
+# # ####
+model.apply_error_matrix_algorithm(transformed_dataframe)
 
 ####
 # After Threshold change
